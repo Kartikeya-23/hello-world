@@ -1,2 +1,13 @@
-<h2>Hello world</h2>
-<h3>Kartikeya</h3>
+<!-- <h2>Angular</h2>
+<h3>Kartikeya</h3> -->
+<input [(ngModel)]="email" (keyup.enter)="onKeyUp()">
+<button class="btn btn-primary" (click)="onSave($event)">Save</button>
+<br>
+<ul>
+    <li>{{course.title | uppercase}}</li>
+    <li>{{course.rating | number:'1.2-2' }}</li>
+    <li>{{course.students | number}}</li>
+    <li>{{course.price | currency: 'INR'}}</li>
+    <li>{{course.releaseDate| date: 'shortDate'}}</li>
+    <li>{{text | summary}}</li>
+</ul>
