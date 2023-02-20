@@ -15,6 +15,30 @@ export class AppComponent {
     price: 190.95,
     releaseDate: new Date(2016, 3, 1)
   }
+
+  cours: any;
+
+  loadCourses(){
+    this.cours = [
+      {
+        id: 1,
+        name: 'course1'
+      },
+      {
+        id: 2,
+        name: 'course2'
+      },
+      {
+        id: 3,
+        name: 'course3'
+      }
+    ];
+  }
+  trackCourse(index: any, course: { id: any }) {
+    return course? course.id : undefined
+  }
+
+  courses = [1,2];
   text: string = "The way I worked in Gemini Solution working as an Angular Developer without having the knowledge of Angular is just Awesome and disgusting at the same time."
   onSave($event: any){
     console.log("Button was clicked")
@@ -48,5 +72,11 @@ export class AppComponent {
 
   onHeartClick() {
     console.log("heart shape is clicked");
+  }
+
+  viewMode = 'map';
+
+  changeViewMode(mode: string){
+    this.viewMode = mode;
   }
 }

@@ -14,9 +14,62 @@
     <li>{{text | summary}}</li>
 </ul> -->
 <!-- End of section-4  -->
-<app-favorite [is-favorite] = "post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorite>
-<app-like [likesCount] = 'tweet.likesCount' [isActive]="tweet.isActive" (change)="onHeartClick()"></app-like>
+<!-- <app-favorite [is-favorite] = "post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorite>
+<app-like [likesCount] = 'tweet.likesCount' [isActive]="tweet.isActive" (change)="onHeartClick()"></app-like> -->
 
-<!-- Start of section-5   -->
+<!-- Start of section-6   -->
 
-<!-- end of section-5  -->
+<div [hidden]="courses.length == 0">
+    List of courses
+</div>
+<div *ngIf="courses.length == 0">
+    No courses Yet
+</div>
+
+<div *ngIf="courses.length > 0; else noCourse">
+    List of courses
+</div>
+<ng-template #noCourse>
+    No courses Yet
+</ng-template>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" >
+                <a [class.active]="viewMode == 'map'" class="nav-link" (click)="changeViewMode('map')" >Map View</a>
+                <a [class.active]="viewMode == 'list'" class="nav-link" (click)="changeViewMode('list')" >List View</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<div [ngSwitch]="viewMode">
+    <div  *ngSwitchCase="'map'">Map View Content</div>
+    <div *ngSwitchCase="'list'">List View Content</div>
+    <div *ngSwitchDefault> Other Wise</div>
+</div>
+
+
+<!-- ngFor -->
+<button (click)="loadCourses()">Load Course</button>
+<div>
+    <ul>
+        <li *ngFor="let course of cours; index as i; trackBy: trackCourse">  {{ course.name }}</li>
+    </ul>
+</div>
+
+<input type="text" appInputFormat>
+
+<!-- Exercise -->
+
+
+<zippy title="Shipping Details">
+    Shipping Details Content
+</zippy>
+<zippy title="Shipping Details">
+    Shipping Details Content
+</zippy>
+
+<!-- end of section-6  -->
+
+
