@@ -30,4 +30,13 @@ export class AppComponent {
   onKeyUp(){
     console.log(this.email);
   }
+
+  post = {
+    title: "Mr.",
+    isFavorite: true
+  }
+
+  onFavoriteChanged(isSelected: boolean){
+    console.log("Favorite changed and got notified in app.component.html", isSelected);
+  }
 }

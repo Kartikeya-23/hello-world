@@ -1,6 +1,8 @@
-<!-- <h2>Angular</h2>
-<h3>Kartikeya</h3> -->
-<input [(ngModel)]="email" (keyup.enter)="onKeyUp()">
+<h2>Angular</h2>
+<h3>Kartikeya</h3>
+
+<!-- Section -4 practice -->
+<!-- <input [(ngModel)]="email" (keyup.enter)="onKeyUp()">
 <button class="btn btn-primary" (click)="onSave($event)">Save</button>
 <br>
 <ul>
@@ -10,4 +12,10 @@
     <li>{{course.price | currency: 'INR'}}</li>
     <li>{{course.releaseDate| date: 'shortDate'}}</li>
     <li>{{text | summary}}</li>
-</ul>
+</ul> -->
+<!-- End of section-4  -->
+<app-favorite [is-favorite] = "post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorite>
+
+<!-- Start of section-5   -->
+
+<!-- end of section-5  -->

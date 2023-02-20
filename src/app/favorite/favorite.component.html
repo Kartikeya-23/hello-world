@@ -1,0 +1,24 @@
+<!-- <p>favorite works!</p>
+<button type="button" class="btn btn-default btn-lg" (click)="isActiveBtn($event)">
+    <div *ngIf="!isActive"><i class="bi bi-star" ></i>Empty Star</div>
+    <div *ngIf="isActive"><i class="bi bi-star-fill"></i>Fill Star</div>
+
+</button>
+
+<div [ngClass]="{'bi-star-fill': this.isFavorite == true }"><i class="bi bi-star" ></i>Empty Star</div> -->
+<br>
+<!-- <span 
+    class="bi"
+    [ngClass]="{'bi-star-fill': this.isFavorite}"
+    [ngClass]="{'bi-star': !this.isFavorite}"
+    (click)="isActiveBtn()"
+></span> -->
+
+<span 
+    class="bi pl-20"
+    [class.bi-star-fill]="this.isFavorite"
+    [class.bi-star]="!this.isFavorite"
+    (click)="isActiveBtn()"
+></span>
+
+
