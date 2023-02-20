@@ -15,6 +15,7 @@
 </ul> -->
 <!-- End of section-4  -->
 <app-favorite [is-favorite] = "post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorite>
+<app-like [likesCount] = 'tweet.likesCount' [isActive]="tweet.isActive" (change)="onHeartClick()"></app-like>
 
 <!-- Start of section-5   -->
 

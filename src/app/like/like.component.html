@@ -1,0 +1,11 @@
+<!-- <div class=""><i class="bi bi-heart"></i></div>
+<i class="bi bi-heart-fill"></i> -->
+
+<h5>Like component exercise</h5>
+<div class="bi pl-20"
+[class.bi-heart]="this.isActive == false"
+[class.bi-heart-fill]="this.isActive"
+(click)="OnClick()"
+> 
+<span>{{ likesCount }}</span>
+</div>

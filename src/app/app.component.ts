@@ -39,4 +39,14 @@ export class AppComponent {
   onFavoriteChanged(isSelected: boolean){
     console.log("Favorite changed and got notified in app.component.html", isSelected);
   }
+
+  tweet = {
+    body: 'Here is the body of a tweet ...',
+    isActive : true,
+    likesCount : 10
+  }
+
+  onHeartClick() {
+    console.log("heart shape is clicked");
+  }
 }

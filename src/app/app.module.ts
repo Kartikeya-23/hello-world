@@ -5,12 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { SummaryPipe } from './summary.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SummaryPipe,
-    FavoriteComponent
+    FavoriteComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,
